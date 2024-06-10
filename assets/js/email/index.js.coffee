@@ -14,7 +14,7 @@ class Email extends Common
       item_num: $('.js-item-num').val()
       strong_num: $('.js-strong').val()
       coin: $('.js-coin').val()
-      seal_flag: $('.js-seal').val()
+      seal: $('.js-seal').val()
       
     load = layer.load()
     $.post "/email", datas, (res) ->

@@ -1,5 +1,5 @@
 module.exports = {
-  host: "192.168.200.131",
-  user: "root",
-  password: "123456"
+  host: "10.0.0.131",
+  user: "game",
+  password: "uu5!^%jg"
 }
