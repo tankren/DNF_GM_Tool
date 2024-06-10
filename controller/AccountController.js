@@ -43,7 +43,7 @@ module.exports = {
 
   role: (req, res, next) => {
     let uid = req.session.uid
-    let sql = `select charac_no,charac_name,job,lev,grow_type from taiwan_cain.charac_info where m_id=${uid} and delete_flag<>1 order by charac_no asc`
+    let sql = `select charac_no,charac_name,job,lev,grow_type from taiwan_cain.charac_info where delete_flag<>1 order by charac_no asc`
     
     db(sql)
     .then( result => {
