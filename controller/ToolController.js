@@ -1,4 +1,4 @@
-let db = require('../controller/DbController');
+let db = require('./DbController');
 
 module.exports = {
   index: (req, res, next) => {
