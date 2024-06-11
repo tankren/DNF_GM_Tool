@@ -8,7 +8,7 @@ let AccountController = require('../controller/AccountController')
 let CreditController = require('../controller/CreditController')
 let EmailController = require('../controller/EmailController')
 let ToolController = require('../controller/ToolController')
-let CodeController = require('../controller/CodeController)
+let CodeController = require('../controller/CodeController')
 
 router.use( (req, res, next) => {
   res.locals.isReg = fs.existsSync(path.resolve('__dirname', '../') + '/reg')
