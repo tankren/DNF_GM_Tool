@@ -48,9 +48,14 @@ class Index extends Common
   mailcode: (event) ->
     index = $(event.target).parents('tr').attr('data-index')
     code = @datas[index].code
+    layer.confirm "是否邮寄此物品？", (layero) ->
+      datas = 
+        code: code
 
-    $.get "/code/mail", 
-      code: code
+    $.get "/code/mail", datas, (res) ->
+        if res.code is 200
+          return location.href = ""
+        layer.msg res.msg
       
 i = new Index
 i.init()
