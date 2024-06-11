@@ -51,8 +51,7 @@ class Index extends Common
     layer.confirm "是否邮寄此物品？", (layero) ->
       datas = 
         code: code
-
-    $.get "/code/mail", datas, (res) ->
+      $.post "/code/mail", datas, (res) ->
         if res.code is 200
           return location.href = ""
         layer.msg res.msg
