@@ -33,4 +33,5 @@ module.exports = {
       code: 200,
       msg: "选择物品代码成功"
     })
+ }
 }
