@@ -47,13 +47,10 @@ class Index extends Common
 
   selectcode: (event) ->
     index = $(event.target).parents('tr').attr('data-index')
-    mid = @datas[index].charac_no
-    role_name = @datas[index].charac_name
+    code = @datas[index].code
 
-    $.get "/role/select", 
-      mid: mid
-      role_name: role_name, (res) ->
-        location.href = ""
+    $.get "/email", 
+      item_id: code
 
 i = new Index
 i.init()
