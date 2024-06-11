@@ -40,10 +40,10 @@ class Index extends Common
         @datas = res.data
         
   search: () ->
-    code = $('.js-code').val()
+    codename = $('.js-codename').val()
     layui.table.reload "code_table",
       where:
-        code: code 
+        codename: codename
 
   selectcode: (event) ->
     index = $(event.target).parents('tr').attr('data-index')
@@ -54,6 +54,6 @@ class Index extends Common
       mid: mid
       role_name: role_name, (res) ->
         location.href = ""
-        
+
 i = new Index
 i.init()
