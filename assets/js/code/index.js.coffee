@@ -49,8 +49,9 @@ class Index extends Common
     index = $(event.target).parents('tr').attr('data-index')
     code = @datas[index].code
 
-    $.get "/email", 
-      item_id: code
+    $.get "/code/mail", 
+      codename: codename, (res) ->
+        location.href = "/mail"
 
 i = new Index
 i.init()

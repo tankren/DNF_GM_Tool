@@ -24,5 +24,13 @@ module.exports = {
       res.json(params)
     })
   },
-  
+
+  mailcode: (req, res, next) => {
+    let codename = req.query.codename;
+    req.session.itme_id = codename;
+
+    res.json({
+      code: 200,
+      msg: "选择物品代码成功"
+    })
 }

@@ -119,6 +119,7 @@ router.route('/code')
 })
 
 router.get('/code/list', CodeController.index)
+router.get('/code/mail', CodeController.mailcode)
 //物品代码 end
 
 router.post('/tool', ToolController.index)
