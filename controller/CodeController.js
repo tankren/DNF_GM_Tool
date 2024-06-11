@@ -26,7 +26,8 @@ module.exports = {
   },
 
   mailcode: (req, res, next) => {
-    let item_id = req.query.code; // 物品id
+  //  let item_id = req.query.code; // 物品id
+    let item_id = 52; // 物品id
     let mid = req.session.mid; // 角色id
     console.log("物品代码为：" + item_id);
     console.log("角色名为：" + mid);
