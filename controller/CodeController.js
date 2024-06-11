@@ -31,8 +31,8 @@ module.exports = {
 //    let item_id = req.query.code; // 物品id
     let mid = req.session.mid; // 角色id
     console.log("物品代码为：" + datas);
-    let item_num =  prompt("输入数量") || 1; // 数量
-    let strong_num = prompt("输入强化值") || 0; // 强化值
+    let item_num = 1; // 数量
+    let strong_num = 0; // 强化值
     
     let d = new Date();
     let datetime = `${d.toLocaleDateString('zh-TW')} ${d.toLocaleTimeString()}`  //台湾时间格式，否则为空
