@@ -28,6 +28,7 @@ module.exports = {
   mailcode: (req, res, next) => {
     let code = req.query.code;
     req.body.itme_id = code;
+    location.href = "/email"
 
     res.json({
       code: 200,
