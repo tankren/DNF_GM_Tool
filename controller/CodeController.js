@@ -27,7 +27,7 @@ module.exports = {
 
   mailcode: (req, res, next) => {
     let code = req.query.code;
-    req.session.itme_id = code;
+    req.body.itme_id = code;
 
     res.json({
       code: 200,
