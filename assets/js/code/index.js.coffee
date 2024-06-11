@@ -11,7 +11,7 @@ class Index extends Common
 
     $(document).on 'click', '.js-search-btn', @search
       
-    $(document).on 'click', '.js-show', -> layer.msg "功能开发中"
+    $(document).on 'click', '.js-select', (event) => @selectcode(event)
 
   tableRender: () ->
     @table.render
@@ -45,5 +45,15 @@ class Index extends Common
       where:
         code: code 
 
+  selectcode: (event) ->
+    index = $(event.target).parents('tr').attr('data-index')
+    mid = @datas[index].charac_no
+    role_name = @datas[index].charac_name
+
+    $.get "/role/select", 
+      mid: mid
+      role_name: role_name, (res) ->
+        location.href = ""
+        
 i = new Index
 i.init()
