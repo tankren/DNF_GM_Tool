@@ -30,7 +30,7 @@ module.exports = {
     let item_id = datas.code
 //    let item_id = req.query.code; // 物品id
     let mid = req.session.mid; // 角色id
-    console.log("物品代码为：" + datas);
+    console.log("物品代码为：" + item_id);
     let item_num = 1; // 数量
     let strong_num = 0; // 强化值
     
