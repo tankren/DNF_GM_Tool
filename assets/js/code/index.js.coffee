@@ -46,9 +46,9 @@ class Index extends Common
         codename: codename
 
   mailcode: (event) ->
-    index = $(event.target).parents('tr').attr('data-index')
+    Index = $(event.target).parents('tr').attr('data-index')
     code = @datas[index].code
-    layer.confirm "是否登录此账号操作？", (layero) ->
+    layer.confirm "是否发送此物品？", (Index) ->
       $.post "/code/mail", 
         code: code, (res) ->
         layer.close(load)
