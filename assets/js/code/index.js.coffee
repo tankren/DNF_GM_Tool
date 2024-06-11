@@ -29,7 +29,7 @@ class Index extends Common
         },
         {
           field: 'grade'
-          title: '等级'
+          title: '等级/备注'
         },
         {
           title: '操作',
