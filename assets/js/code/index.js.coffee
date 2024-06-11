@@ -50,7 +50,8 @@ class Index extends Common
     code = @datas[index].code
 
     $.get "/code/mail", 
-      code: code
+      code: code, (res) ->
+        location.href = "/email"
 
 i = new Index
 i.init()

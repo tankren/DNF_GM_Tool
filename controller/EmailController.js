@@ -12,6 +12,13 @@ module.exports = {
 
     let d = new Date();
     let datetime = `${d.toLocaleDateString('zh-TW')} ${d.toLocaleTimeString()}`  //台湾时间格式，否则为空
+    
+    if (item_id = 0) {
+      return res.json({
+        code: 400,
+        msg: "物品代码为空，请重新输入"
+      })
+    }
 
     let sql = `insert into taiwan_cain_2nd.letter 
     (charac_no,send_charac_name,letter_text,reg_date) 
