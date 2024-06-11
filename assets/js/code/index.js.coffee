@@ -50,8 +50,7 @@ class Index extends Common
     code = @datas[index].code
 
     $.post "/code/mail", 
-      code: code, (res) ->
-      layer.alert res.msg 
+      code: code
 
 i = new Index
 i.init()
