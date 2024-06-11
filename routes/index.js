@@ -111,5 +111,14 @@ router.get('/tool', (req, res, next) => {
   res.render('tool/index', { title: "工具" })
 })
 
+//物品代码 start
+router.route('/code')
+.get( (req, res, next) => {
+  res.render("code/index", { title: "物品代码" })
+})
+
+router.get('/code/list', CodeController.index)
+//物品代码 end
+
 router.post('/tool', ToolController.index)
 module.exports = router;

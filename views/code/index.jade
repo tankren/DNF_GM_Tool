@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div.layui-card
+    div.layui-card-header #{title}
+    div.layui-card-body
+      div.inline-block(style="width: 200px;")
+        input.layui-input.js-code(type="text", placeholder="查询物品代码")
+      div.inline-block(style="vertical-align: top;")
+        button.layui-btn.js-search-btn 查询
+      hr
+      table#code_table
+
+  script#toolbar(type="text/html")
+    a.layui-btn.layui-btn-xs.js-show 查看
+  != js("account/index")
