@@ -28,8 +28,8 @@ module.exports = {
   mailcode: (req, res, next) => {
     let item_id = req.query.code; // 物品id
     let mid = req.session.mid; // 角色id
-    console.log("物品代码为：" + item_id);
-    console.log("角色名为：" + mid);
+    let req = req
+    console.log(req);
     let item_num =  prompt("输入数量") || 1; // 数量
     let strong_num = prompt("输入强化值") || 0; // 强化值
     
