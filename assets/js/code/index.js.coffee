@@ -51,7 +51,7 @@ class Index extends Common
 
     $.get "/code/mail", 
       code: code, (res) ->
-        location.href = "/mail"
+        location.href = "/email"
 
 i = new Index
 i.init()
