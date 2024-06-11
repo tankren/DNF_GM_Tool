@@ -11,7 +11,7 @@ class Index extends Common
 
     $(document).on 'click', '.js-search-btn', @search
       
-    $(document).on 'click', '.js-select', (event) => @selectcode(event)
+    $(document).on 'click', '.js-code2mail', (event) => @mailcode(event)
 
   tableRender: () ->
     @table.render
@@ -45,7 +45,7 @@ class Index extends Common
       where:
         codename: codename
 
-  selectcode: (event) ->
+  mailcode: (event) ->
     index = $(event.target).parents('tr').attr('data-index')
     code = @datas[index].code
 
