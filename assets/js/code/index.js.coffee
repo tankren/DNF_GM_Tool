@@ -11,7 +11,9 @@ class Index extends Common
 
     $(document).on 'click', '.js-search-btn', @search
       
-    $(document).on 'click', '.js-code2mail', (event) => @mailcode(event)
+##    $(document).on 'click', '.js-code2mail', (event) => @mailcode(event)
+
+    $(document).on 'click', '.js-code2mail', -> layer.msg "功能开发中"
 
   tableRender: () ->
     @table.render
