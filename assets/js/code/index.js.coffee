@@ -49,9 +49,7 @@ class Index extends Common
     index = $(event.target).parents('tr').attr('data-index')
     code = @datas[index].code
     layer.confirm "是否发送此物品？", (layero) ->
-      datas =
-        code: code
-      $.post "/code/mail", datas, (res) ->
+      $.post "/code/mail", code, (res) ->
         layer.close(load)
         layer.alert res.msg
 
